@@ -52,7 +52,7 @@ const VALID_TYPES = [
  *         shared by both requirements and options are not in the returned
  *         object.
  */
-exports.validateOptions = function validateOptions(options, requirements) {
+function validateOptions(options, requirements) {
     options = options || {};
     const validatedOptions = {};
 
@@ -109,7 +109,8 @@ exports.validateOptions = function validateOptions(options, requirements) {
     }
 
     return validatedOptions;
-};
+}
+exports.validateOptions = validateOptions;
 
 // Similar to typeof, except arrays, null and regexps are identified
 // by "array" and "null" and "regexp", not "object'.
