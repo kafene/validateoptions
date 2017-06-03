@@ -1,0 +1,17 @@
+{
+  "name": "validateoptions",
+  "version": "0.0.1",
+  "description": "A simple options validator forked from the Mozilla Add-on SDK",
+  "main": "src/validateoptions.js",
+  "repository": "https://github.com/kafene/validateoptions",
+  "author": "kafene software <kafene@users.noreply.github.com> (https://kafene.org/)",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "nodeunit": "^0.11.1"
+  },
+  "scripts": {
+    "dist": "browserify src/validateoptions.js -o dist/validateoptions.js",
+    "test": "nodeunit test/test-*.js"
+  }
+}
