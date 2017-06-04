@@ -7,10 +7,6 @@
   "author": "kafene software <kafene@users.noreply.github.com> (https://kafene.org/)",
   "license": "MPL-2.0",
   "devDependencies": {
-    "babel-plugin-transform-strict-mode": "^6.24.1",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.5.1",
-    "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "nodeunit": "^0.11.1"
   },
