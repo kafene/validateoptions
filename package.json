@@ -1,6 +1,6 @@
 {
   "name": "validateoptions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple options validator forked from the Mozilla Add-on SDK",
   "main": "src/validateoptions.js",
   "repository": "https://github.com/kafene/validateoptions",
