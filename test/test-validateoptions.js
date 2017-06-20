@@ -335,5 +335,8 @@ exports.testValidateOptionsDefault = function (test) {
     val = vo.validateOptions({foo: null}, {foo: {dflt: 29}});
     test.deepEqual(val, {foo: null});
 
+    val = vo.validateOptions({}, {foo: {dflt: '', is: ['string']}});
+    test.deepEqual(val, {foo: ''});
+
     test.done();
 };
