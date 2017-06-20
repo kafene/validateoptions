@@ -64,6 +64,11 @@ function validateOptions(options, requirements) {
         let keyInOpts = (key in options);
         let optsVal = (keyInOpts) ? options[key] : undefined;
 
+        if ('dflt' in req && optsVal === undefined) {
+            optsVal = req.dflt;
+            keyInOpts = true;
+        }
+
         if (req.map) {
             try {
                 optsVal = req.map(optsVal);

@@ -313,3 +313,27 @@ exports.testValidateMapWithMissingKeyAndThrown = function (test) {
 
     test.done();
 };
+
+exports.testValidateOptionsDefault = function (test) {
+    let val;
+
+    val = vo.validateOptions({foo: 123}, {foo: {}, bar: {dflt: 11}});
+    test.deepEqual(val, {foo: 123, bar: 11});
+
+    val = vo.validateOptions({foo: 123}, {foo: {dflt: 29}, bar: {dflt: 11}});
+    test.deepEqual(val, {foo: 123, bar: 11});
+
+    val = vo.validateOptions({}, {foo: {dflt: 29}});
+    test.deepEqual(val, {foo: 29});
+
+    val = vo.validateOptions({}, {foo: {dflt: undefined}});
+    test.deepEqual(val, {foo: undefined});
+
+    val = vo.validateOptions({foo: undefined}, {foo: {dflt: 29}});
+    test.deepEqual(val, {foo: 29});
+
+    val = vo.validateOptions({foo: null}, {foo: {dflt: 29}});
+    test.deepEqual(val, {foo: null});
+
+    test.done();
+};
